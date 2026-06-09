@@ -10,7 +10,7 @@ def fetch_sample_data():
     return response.json()
 
 
-def write_log(entries):
+def generate_log(entries):
     """Write a list of text entries to a dated log file."""
     if not isinstance(entries, list):
         raise ValueError("entries must be a list")
@@ -31,4 +31,4 @@ if __name__ == "__main__":
         f"Title: {post.get('title')}",
         f"Body: {post.get('body')}",
     ]
-    write_log(log_entries)
+    generate_log(log_entries)
