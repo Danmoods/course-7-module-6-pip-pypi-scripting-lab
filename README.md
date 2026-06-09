@@ -125,6 +125,30 @@ pip freeze > requirements.txt
 
 ---
 
+### Task 4: Build a CLI Task Manager
+
+This lab also supports building a command-line task manager with object-oriented structure.
+Create a root-level script called `task_manager.py` that:
+
+- Uses `argparse` to define commands
+- Uses classes like `Task` and `TaskManager`
+- Supports `add-task`, `complete-task`, `list-tasks`, and `fetch-sample-task`
+- Persists tasks in `tasks.json`
+- Prints terminal feedback for every action
+
+Example usage:
+
+```bash
+python task_manager.py add-task "Write unit tests"
+python task_manager.py list-tasks
+python task_manager.py complete-task 1
+python task_manager.py fetch-sample-task
+```
+
+This CLI tool uses `requests` to fetch sample tasks from a public API, demonstrating a pip-installed dependency in an automated script.
+
+---
+
 ## Best Practices
 
 - Use clear function names (`fetch_data`, `write_log`) for clarity.
